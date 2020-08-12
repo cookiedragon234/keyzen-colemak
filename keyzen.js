@@ -12,7 +12,7 @@ $(document).ready(function() {
     else {
         set_level(1);
     }
-    $(document).keypress(keyHandler);
+    $(document).keydown(keyHandler);
 });
 
 
@@ -33,6 +33,8 @@ function set_level(l) {
 
 
 function keyHandler(e) {
+    if (event.repeat === true) return;
+    
     var key = String.fromCharCode(e.which);
     if (data.chars.indexOf(key) > -1){
         e.preventDefault();
