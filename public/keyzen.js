@@ -12,7 +12,7 @@ $(document).ready(function() {
     else {
         set_level(1);
     }
-    $(document).keydown(keyHandler);
+    $(document).keypress(keyHandler);
 });
 
 
